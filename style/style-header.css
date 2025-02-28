@@ -163,3 +163,25 @@ header{
         transform: scale(1);
     }
 }
+.record{
+    display: flex;
+    position: relative;
+    top: 20px;
+    & h2{
+        margin:20px;
+        padding: 5px 15px;     
+        border-radius: 10px;
+    }
+    & h2:nth-child(1){
+        box-shadow: 0 0 10px 1px lime;
+        border: 2px solid lime;
+    }
+    & h2:nth-child(2){
+        box-shadow: 0 0 10px 1px red;
+        border: 2px solid red;
+    }
+    & h2:nth-child(3){
+        box-shadow: 0 0 10px 1px white;
+        border: 2px solid white;
+    }
+}
