@@ -1,0 +1,27 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    & img{
+        position: relative;
+        width: 150px;
+        margin-left: 100px;
+        
+    }
+    & .social-ahmed{
+        margin-right:20px ;
+        & ul{
+                    display: flex;
+            & li{
+                margin: 25px;
+                font-size: 40px;
+                & a{
+                    color:white;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --sac-color:red;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(12, 12, 12);
+}
+.logo img{
+    width: 70px;
+    border-radius: 50%;
+    position: absolute;
+}
+header{
+    & .top{
+        display: flex;
+        justify-content: center;
+        background-color:black;
+    & ul{
+        display: flex;    
+
+        & li{       
+             position: relative;
+            margin:10px
+            35px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 22px;
+            & a{
+             color: white;
+
+            }
+        }         
+             & li::before{
+                content: "";
+                height: 2px;
+                width: 0px;
+                background-color: var(--sac-color);
+                position: absolute;
+                margin-top: 25px;
+                transition: 0.3s;
+            }
+            & li:hover::before{
+                width: 100%;
+            }
+    }
+    }
+    /* -------------------- */
+    & .main{
+        display: flex;
+        box-shadow: 1px 0px 20px 10px black;
+        justify-content: space-around;
+        background-color:black;
+        color: white;
+        padding-bottom: 20px;
+        border-radius: 0 0 50px 50px;
+        & .dis-fot-yassin{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            & h2{
+                text-transform: capitalize;
+                font-size: 40px;
+                & span{
+                    color: red;
+                    text-transform: capitalize;
+                }
+                animation-name: dis;
+                animation-duration: 2s;
+            }
+            & a{
+                transition: 0.3s;
+                font-size: 30px;
+                padding: 10px 100px;
+                border-radius: 30px;
+                cursor: pointer;
+                background-color: white;
+                border: 1px solid white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: black;
+                position: relative;
+                margin-top: 5px;
+                overflow: hidden;
+                    & img{
+                        width: 70px;
+                        left: 43%;
+                        transform: translateY(200px);
+                        background-color: red;
+                       position: absolute;
+                       mask-image: url('/data/1f94a_high_contrast.png');
+                       mask-size:contain;
+                       mask-repeat: no-repeat;
+                       object-fit: contain;
+                       object-position: 10000px 10000px;
+                       opacity: 0;
+                       transition: 0.3s;
+                    }
+                    animation-name: button;
+                    animation-duration: 1s;
+
+            }
+                    & a:hover img{
+                      opacity: 1;
+                      transform: translateY(0);
+                    }
+                    & a:hover{
+                        color: transparent;
+                        background-color: black;
+                        outline: none;
+                        border:1px solid var(--sac-color);
+                        transform: scale(1.1);
+                    }
+        }
+        & .yassin-img{
+            & img{
+              width: 800px;
+            margin-top: 30px ;
+            position: relative;  
+              animation-name: img;
+              animation-duration: 1.5s;
+            }
+
+        }
+    }
+
+}
+@keyframes img {
+    from{
+        left: 200px;
+        opacity: 0;
+    }
+    to{
+        left: 0;
+    }
+}
+@keyframes dis {
+    from{
+        bottom: 200px;
+        opacity: 0;
+    }
+    to{
+        bottom: 0;
+    }
+}
+@keyframes button {
+    from{
+        transform: scale(0.3);
+    }
+    to{
+        transform: scale(1);
+    }
+}
