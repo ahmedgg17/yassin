@@ -19,3 +19,17 @@ function scroll(){
 let ele = document.querySelector("#about")
 ele.scrollIntoView({behavior:'smooth'})
 }
+let openSider = document.getElementById('openSider')
+openSider.addEventListener('click',()=>{
+let sider =document.getElementById('sider')
+sider.classList.toggle('sider-show')
+sider.classList.toggle('sider-close')
+}
+)
+let close = document.getElementById('close')
+close.addEventListener('click',()=>{
+let sider = document.getElementById('sider')
+sider.classList.toggle('sider-show')
+sider.classList.toggle('sider-close')
+}
+)
