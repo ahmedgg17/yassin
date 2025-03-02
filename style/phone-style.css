@@ -74,7 +74,7 @@ header{
         margin-top: 70px;
         overflow: hidden;
         & img{
-            width: 70px;
+            width: 50px;
             left: 43%;
             transform: translateY(200px);
             background-color: red;
@@ -90,16 +90,16 @@ header{
         animation-name: button;
         animation-duration: 1s;
     }
-    & a:hover img{
+    & a:active img{
         opacity: 1;
         transform: translateY(0);
       }
-      & a:hover{
+      & a:active{
           color: transparent;
           background-color: black;
           outline: none;
           border:1px solid red;
-          transform: scale(1.1);
+          transform: scale(0.9);
       }
     
 }
@@ -152,7 +152,7 @@ header{
     left: 0;
 }
 .top ul{
-
+    border-left: 1px solid white;
     z-index: 10000;
     transition: 0.9s;
     text-align: center;
@@ -171,15 +171,27 @@ right: 0;
  background-color: black;
  height: 100vh;
  & li{
-    margin:0 10px;
+    margin:0 10px 0 0;
     margin-bottom: 70px;
-    border: 1px solid white;
-    padding: 5px 0;
-    border-radius: 10px;
+    border: 2px solid white;
+    padding: 5px 5px 5px 5px;
+    border-radius:10px ;
+
     & a{
            color: white;
            font-size: 23px; 
     }
+ }
+ & .main,.about1,.more,.social{
+    padding: 0 80px;
+
+
+ }
+ & .li-main,.li-about1,.li-social,.last{
+    padding: 5px 0 5px 5px;
+    border-radius: 0 10px 10px 0;
+    padding: 5px 0px 5px 5px;  
+    border-left: 1px solid black;
  }
 }
 .sider-social{
@@ -291,7 +303,7 @@ right: 0;
             border-radius: 20px;
             & li a{
                 margin:50px;
-                font-size: 27px;
+                font-size: 20px;
             transition: 0.3s;
             cursor: pointer;
             color: white;
@@ -306,8 +318,14 @@ right: 0;
             border-radius: 20px;
             text-align: center;
 
+            & a{
+padding: 0 50px;
+margin: 0;
+
 
             }
+            }
+
             & li:nth-child(1){
                 transition: 1s;         
             }
@@ -317,8 +335,8 @@ right: 0;
             & li:nth-child(3){
                 transition: 1s;
             }
-            & li:hover{
-                transform: scale(1.2);
+            & li:active{
+                transform: scale(0.9);
             }
         }
     }
