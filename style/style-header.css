@@ -19,6 +19,9 @@ body{
 .phone{
     display: none;
 }
+.display{
+    display: none;
+}
 .logo img{
     width: 70px;
     border-radius: 50%;
@@ -180,15 +183,15 @@ header{
         border-radius: 10px;
     }
     & h2:nth-child(1){
-        box-shadow: 0 0 10px 1px lime;
-        border: 2px solid lime;
+        box-shadow: 0 10px 10px 1px white;
+        border: 2px solid white;
     }
     & h2:nth-child(2){
-        box-shadow: 0 0 10px 1px red;
-        border: 2px solid red;
+        box-shadow: 0 10px 10px 1px white;
+        border: 2px solid white;
     }
     & h2:nth-child(3){
-        box-shadow: 0 0 10px 1px white;
+        box-shadow: 0 10px 10px 1px white;
         border: 2px solid white;
     }
 }

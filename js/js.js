@@ -28,15 +28,18 @@ let body = document.body
 body.classList.add("overflow")
 document.querySelector(".overlay").classList.remove("display")
 }
-)
-let close = document.getElementById('close')
-close.addEventListener('click',()=>{
-let sider = document.getElementById('sider')
+)    
+function cansel(){
+        let sider = document.getElementById('sider')
 sider.classList.remove('sider-show')
 sider.classList.add('sider-close')
 let body = document.body 
 body.classList.remove("overflow")
 document.querySelector(".overlay").classList.add("display")
+}
+let close = document.getElementById('close')
+close.addEventListener('click',()=>{
+    cansel()
 }
 )
 let social = document.querySelector('.instagram')
@@ -66,6 +69,13 @@ window.addEventListener('scroll',()=>{
     }
 })
 
+let canselTeleport = document.querySelectorAll('.cansel')
+
+canselTeleport.forEach((a)=>{
+    a.addEventListener('click',()=>{
+        cansel()
+    })
+})
 
 
 
@@ -79,6 +89,9 @@ let aboutYassin =`Yassin Nabil is an 18-year-old amateur MMA fighter, standing a
 let month =`--`;
 let day =`--`;
 let year =`----`;
+let wins = 2
+let loss = 1
+let draw = 0
 
 let nextMatchTime = `${day}/${month}/${year}`
 
@@ -86,3 +99,6 @@ document.querySelector(".theWelcome").innerHTML = headerDis
 document.querySelector(".matchs-dis").innerHTML = matchDis
 document.querySelector(".about-dis").innerHTML = aboutYassin
 document.querySelector(".time").innerHTML = nextMatchTime
+document.querySelector('.wins').innerHTML = wins
+document.querySelector('.loss').innerHTML = loss
+document.querySelector('.draw').innerHTML = draw
