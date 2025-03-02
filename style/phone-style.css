@@ -13,9 +13,26 @@ html{
 body{
     margin: 0;
     padding: 0;
+    overflow:initial;
     overflow-x: hidden;
     background-color: rgb(12, 12, 12);
     height: 110vh;
+}
+.overflow{
+    overflow:hidden;
+}
+.vis{
+    opacity: 30%;
+}
+.overlay{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.582);
+}
+.display{
+    display: none;
 }
 header{
     background-color: black;
@@ -33,7 +50,7 @@ header{
     & h2{
         animation-name: dis;
         animation-duration: 2s;
-        font-size: 30px;
+        font-size: 25px;
         padding: 10px;
         & span{
             color: red;
@@ -41,10 +58,10 @@ header{
     }
     & a{
         transition: 0.3s;
-        font-size: 25px;
+        font-size: 23px;
         font-weight: 600;
-        padding: 10px 100px;
-        margin: 0 40px;
+        padding: 7px 100px;
+        margin: 0 45px;
         border-radius: 30px;
         cursor: pointer;
         background-color: white;
@@ -97,15 +114,15 @@ header{
         border-radius: 10px;
     }
     & h2:nth-child(1){
-        box-shadow: 0 0 10px 1px lime;
-        border: 2px solid lime;
+        box-shadow: 0 10px 10px 1px white;
+        border: 2px solid white;
     }
     & h2:nth-child(2){
-        box-shadow: 0 0 10px 1px red;
-        border: 2px solid red;
+        box-shadow: 0 10px 10px 1px white;
+        border: 2px solid white;
     }
     & h2:nth-child(3){
-        box-shadow: 0 0 10px 1px white;
+        box-shadow: 0 10px 10px 1px white;
         border: 2px solid white;
     }
 }
@@ -160,16 +177,15 @@ right: 0;
     border-radius: 10px;
     & a{
            color: white;
-           font-size: 30px; 
+           font-size: 23px; 
     }
  }
 }
 .sider-social{
     display: flex;
-    position: absolute;
     justify-content: space-around;
     position: relative;
-    bottom: -200px;
+    bottom: -100px;
     & li a{
         padding: 10px;
     }
@@ -220,7 +236,7 @@ right: 0;
  
  /* display: none; */
  & img{
-    width: 350px;
+    width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -259,6 +275,9 @@ right: 0;
     display: none;
 }
 .social{
+    & h1{
+        font-size: 25px;
+    }
     display: flex;  
           flex-direction: column;
           align-items:center ;
@@ -271,27 +290,31 @@ right: 0;
             border-radius: 20px;
             & li a{
                 margin:50px;
-                font-size: 40px;
+                font-size: 27px;
             transition: 0.3s;
             cursor: pointer;
             color: white;
             }
            & li{
+
+
             margin:50px 0;
             border: 3px solid white;
             box-shadow: 0 0 10px 1px ; 
             padding: 10px;
             border-radius: 20px;
             text-align: center;
+
+
             }
             & li:nth-child(1){
-                transition: 0.3s;
+                transition: 1s;         
             }
             & li:nth-child(2){
-                transition: 0.3s;
+                transition: 1s;
             }
             & li:nth-child(3){
-                transition: 0.3s;
+                transition: 1s;
             }
             & li:hover{
                 transform: scale(1.2);
@@ -301,6 +324,9 @@ right: 0;
     .show{
         opacity: 1;
         transform: translateX(0);
+    }
+    .unshow{
+        opacity: 0;
     }
 .sider-show{
     transform: translateX(0px);

@@ -94,36 +94,3 @@ display: flex;
     opacity: 1;
     transform: translateX(0);
 }
-@media (max-width:768px){
-    .yassin-matchs{
-        display: block;
-        text-align: center;
-        min-height: 100px;
-    }
-    .matchs-dis{
-        font-size: 20px;
-        width: 600px;
-    }
-    .yassin-matchs img{
-        width: 400px;
-    }
-    .about-yassin{
-        display: block;  
-        text-align: center;
-    }
-    .about-yassin img{
-        width: 400px;
-    }
-    .about-dis{
-        width: 600px;
-    }
-    .social{
-        
-        & ul{
-            display: block;
-        }
-    }
-    footer{
-        display: none;
-    }
-}
